@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function Task({ task: { id, title, state }, onArchiveTask, onPinTask }) {
+export default function Task({ task: { id, title, state, completed }, onArchiveTask, onPinTask }) {
     return (
         <div className={`list-item ${state}`}>
             <label className="checkbox">
@@ -9,6 +9,7 @@ export default function Task({ task: { id, title, state }, onArchiveTask, onPinT
                     type="checkbox"
                     defaultChecked={state === 'TASK_ARCHIVED'}
                     disabled={true}
+                    checked={completed}
                     name="checked"
                 />
                 <span className="checkbox-custom" onClick={() => onArchiveTask(id)} />

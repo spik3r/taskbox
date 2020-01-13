@@ -21,7 +21,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public",
+    "build-storybook": "build-storybook -c .storybook",
+    "build-storybook-old": "build-storybook -s public",
     "chromatic": "CHROMATIC_APP_CODE=n8o2el9pjnk chromatic"
   },
   "eslintConfig": {
